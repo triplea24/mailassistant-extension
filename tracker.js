@@ -1,7 +1,25 @@
 InboxSDK.load('1.0', 'sdk_trackermercy_dba13e1d18').then(function(sdk){
-    
+    // alert('Extension');
     // console.log(user_email);
+    var appName = 'Email Assistant';
+    var iconUrl = 'https://mercy.pythonanywhere.com/static/panel/landing/images/logo.png';
+    var landingUrl = 'https://mercy.pythonanywhere.com';
+    sdk.Toolbars.addToolbarButtonForApp({
+        title: appName,
+        iconUrl: iconUrl,
+        onClick: function(event) {
+          window.open(landingUrl);
+        },
+    });
     sdk.Compose.registerComposeViewHandler(function(composeView){
+
+      composeView.addButton({
+        title: appName,
+        iconUrl: iconUrl,
+        onClick: function(event) {
+          // event.composeView.insertTextIntoBodyAtCursor('Hello World!');
+        },
+      });
     
         uuid = function () {
         //// return uuid of form xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx

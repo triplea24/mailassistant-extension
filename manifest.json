@@ -3,18 +3,14 @@
  	"name": "Email Assistant",
  	"version": "0.1",
  	"permissions": [
-    "https://mail.google.com/",
-    "https://inbox.google.com/",
-    "https://mercy.pythonanywhere.com/*"
+	    "https://mail.google.com/",
+	    "https://inbox.google.com/"
   	],
-
- 	"content_scripts": [
-	{
-    	"matches": [
-      	"https://mail.google.com/*", "http://mail.google.com/*"
-    ],
-    	"js": ["inboxsdk.js", "tracker.js","jquery.js"]
-	}
-	]
+ 	"content_scripts": [{
+	    	"matches": [
+	    	  	"https://mail.google.com/*", "http://mail.google.com/*"
+	    	],
+	    	"js": ["inboxsdk.js", "tracker.js","jquery.js"]
+	}]
 }
 
